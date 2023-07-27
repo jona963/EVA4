@@ -1,0 +1,52 @@
+
+<div class="abrir-form">
+    <button mat-raised-button (click)="abrirSolicitud()"> 
+        <mat-icon color="primary">note_add</mat-icon>Solicitud</button>
+</div>
+<div class="main-table-container">
+    <div class="main-table">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> ID</th>
+                <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="tipo">
+                <th mat-header-cell *matHeaderCellDef> Nombre Solicitud</th>
+                <td mat-cell *matCellDef="let row"> {{row.tipo}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="titulo">
+                <th mat-header-cell *matHeaderCellDef> Titulo</th>
+                <td mat-cell *matCellDef="let row"> {{row.titulo}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="contenido">
+                <th mat-header-cell *matHeaderCellDef> Contenido </th>
+                <td mat-cell *matCellDef="let row"> {{row.contenido}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef>action</th>
+                <td mat-cell *matCellDef="let row">
+
+                    <div fxLayout="row" fxLayoutGap="1px">
+                        <button mat-icon-button color="primary" (click)="editarSolicitud(row)">
+                            <mat-icon>edit_note</mat-icon>
+                        </button>
+                        <button mat-icon-button color="warn" (click)="eliminarSolicitud(row.id)">
+                            <mat-icon>delete_forever</mat-icon>
+                        </button>
+                    </div>
+                </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+</div>
+
+  
+
+

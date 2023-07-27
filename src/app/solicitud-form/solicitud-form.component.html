@@ -1,0 +1,24 @@
+<div mat-dialog-title>
+    <h1>Solicitud</h1>
+</div>
+<form [formGroup]="formSolicitud" (ngSubmit)="onSubSolicitud()">
+    <div mat-dialog-content>
+        <div class="row">
+            
+            <mat-form-field appearance="fill">
+                <mat-label>Nombre Solicitud</mat-label>
+                <input matInput type="text" placeholder="Nombre Solicitud" formControlName="tipo" required>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Contenido</mat-label>
+                <input matInput type="text" placeholder="Ingresa el contenido" formControlName="contenido" required>
+            </mat-form-field>
+        </div>
+
+    </div>
+    <div mat-dialog-actions class="action">
+        <button mat-raised-button type="button" [mat-dialog-close]="false">Cancelar</button>
+        <button mat-raised-button color="primary" type="submit">{{data ? 'Update':'Save'}}</button>
+    </div>
+</form>

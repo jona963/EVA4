@@ -1,0 +1,18 @@
+{
+  "contratos": [
+    {
+      "contrato": "Contarto de servicios basicos",
+      "autor": "Sociedad copropietarios",
+      "contenido": "Contrato",
+      "id": 8
+    }
+  ],
+  "solicitudes": [
+    {
+      "id": 3,
+      "tipo": "Solictid de arriendo sala de eventos",
+      "titulo": "",
+      "contenido": "Salicitud"
+    }
+  ]
+}

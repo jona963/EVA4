@@ -1,0 +1,28 @@
+<mat-tab-group>
+    <!-- Pestaña de mensajes -->
+    <mat-tab label="Mensajes">
+      <div class="mensaje-container">
+        <mat-card *ngFor="let mensaje of mensajes" class="message-card">
+          <mat-card-content>
+            <h3>{{ mensaje.title }}</h3>
+            <p>{{ mensaje.body }}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-tab>
+  
+    <!-- Pestaña de anuncios -->
+    <mat-tab label="Anuncios">
+      <div class="mensaje-container">
+        <mat-card *ngFor="let anuncio of anuncios" class="message-card">
+            <mat-card-content>
+              <h3>{{ anuncio.name }}</h3>
+              <p>{{ anuncio.email }}</p>
+              <p>{{ anuncio.body }}</p>
+            </mat-card-content>
+          </mat-card>
+       
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+  

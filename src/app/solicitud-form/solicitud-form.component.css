@@ -1,0 +1,15 @@
+.row{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  h1{
+    text-align: center;
+  }
+  .action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px, 20px 20px;
+  }
+  
